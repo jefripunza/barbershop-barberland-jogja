@@ -90,23 +90,43 @@ import { h, reactive, ref } from 'vue'
 
 const contactInfo = [
   {
-    title: 'Alamat',
-    detail: 'Jl. Malioboro No. 123<br>Yogyakarta 55271',
+    title: 'Cabang Utama — Malioboro',
+    detail: 'Jl. Malioboro No. 123<br>Yogyakarta 55271<br><a href="https://maps.app.goo.gl/DRpSDXHMAFXfa1kb7?g_st=ic" target="_blank" class="text-primary-400 hover:text-primary-300 underline">📍 Buka Google Maps</a>',
     icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
       h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }),
       h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M15 11a3 3 0 11-6 0 3 3 0 016 0z' })
     ])
   },
   {
+    title: 'Cabang 2 — Sleman',
+    detail: 'Jl. Kaliurang Km 5.5<br>Sleman, Yogyakarta',
+    icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }), h('circle', { cx: '12', cy: '11', r: '3', 'stroke-width': '2' })])
+  },
+  {
+    title: 'Cabang 3 — Bantul',
+    detail: 'Jl. Bantul No. 45<br>Bantul, Yogyakarta',
+    icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }), h('circle', { cx: '12', cy: '11', r: '3', 'stroke-width': '2' })])
+  },
+  {
+    title: 'Cabang 4 — Maguwo',
+    detail: 'Jl. Maguwoharjo No. 78<br>Depok, Sleman',
+    icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }), h('circle', { cx: '12', cy: '11', r: '3', 'stroke-width': '2' })])
+  },
+  {
+    title: 'Cabang 5 — Godean',
+    detail: 'Jl. Godean Km 3<br>Godean, Sleman',
+    icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' }), h('circle', { cx: '12', cy: '11', r: '3', 'stroke-width': '2' })])
+  },
+  {
     title: 'Jam Operasional',
-    detail: 'Senin - Sabtu: 09:00 - 21:00<br>Minggu: 10:00 - 18:00',
+    detail: 'Senin - Sabtu: 09:00 - 21:00<br>Minggu: 10:00 - 18:00 (kecuali cabang utama buka seperti biasa)',
     icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
       h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' })
     ])
   },
   {
-    title: 'Kontak',
-    detail: 'Tel: (0274) 123-4567<br>WA: 08xxxxxxxxx',
+    title: 'Kontak Pusat',
+    detail: 'Tel: (0274) 123-4567<br>WA: 08xxxxxxxxx<br>IG: @barberlandjogja',
     icon: () => h('svg', { fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
       h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' })
     ])

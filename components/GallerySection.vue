@@ -8,16 +8,36 @@
       </div>
 
       <!-- Gallery Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div v-for="(item, i) in gallery" :key="i" class="relative group cursor-pointer overflow-hidden rounded-xl aspect-square" :class="{ 'md:col-span-2 md:row-span-2': item.featured }">
-          <div class="w-full h-full bg-gradient-to-br from-dark-700 to-dark-800 flex items-center justify-center border border-dark-600/30 rounded-xl overflow-hidden">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Featured image 1 -->
+        <div class="relative group cursor-pointer overflow-hidden rounded-xl aspect-square md:col-span-2 md:row-span-2">
+          <div class="w-full h-full bg-gradient-to-br from-dark-700 to-dark-800 rounded-xl overflow-hidden border border-dark-600/30">
+            <img src="/images/barbershop-1.jpg" alt="Barbershop interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <p class="text-white font-semibold text-lg">Barberland Interior</p>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="relative group cursor-pointer overflow-hidden rounded-xl aspect-square">
+          <div class="w-full h-full bg-gradient-to-br from-dark-700 to-dark-800 rounded-xl overflow-hidden border border-dark-600/30">
+            <img src="/images/barbershop-2.jpg" alt="Barbershop detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <p class="text-white font-semibold text-sm">Grooming Tools</p>
+          </div>
+        </div>
+
+        <!-- Placeholder gallery items -->
+        <div v-for="item in galleryItems" :key="item.title" class="relative group cursor-pointer overflow-hidden rounded-xl aspect-square">
+          <div class="w-full h-full bg-gradient-to-br from-dark-700 to-dark-800 rounded-xl overflow-hidden border border-dark-600/30 flex items-center justify-center">
             <div class="text-center p-4">
-              <div class="text-5xl mb-3">{{ item.emoji }}</div>
+              <div class="text-5xl mb-2">{{ item.emoji }}</div>
               <p class="text-white font-semibold text-sm">{{ item.title }}</p>
               <p class="text-gray-500 text-xs mt-1">{{ item.barber }}</p>
             </div>
           </div>
-          <!-- Hover overlay -->
           <div class="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-all duration-300 rounded-xl border border-transparent group-hover:border-primary-500/30"></div>
         </div>
       </div>
@@ -30,16 +50,12 @@
 </template>
 
 <script setup>
-const gallery = [
-  { emoji: '💇', title: 'Classic Pompadour', barber: 'By Adi', featured: true },
-  { emoji: '✂️', title: 'Modern Fade', barber: 'By Rudi', featured: false },
-  { emoji: '🧔', title: 'Beard Trim', barber: 'By Andi', featured: false },
-  { emoji: '💈', title: 'Undercut', barber: 'By Budi', featured: false },
-  { emoji: '✨', title: 'Textured Crop', barber: 'By Adi', featured: false },
-  { emoji: '🪒', title: 'Royal Shave', barber: 'By Rudi', featured: false },
-  { emoji: '👤', title: 'Buzz Cut', barber: 'By Andi', featured: false },
-  { emoji: '🌟', title: 'Slick Back', barber: 'By Budi', featured: false },
-  { emoji: '🔥', title: 'Taper Fade', barber: 'By Adi', featured: true },
-  { emoji: '⭐', title: 'French Crop', barber: 'By Rudi', featured: false },
+const galleryItems = [
+  { emoji: '💇', title: 'Classic Pompadour', barber: 'By Adi' },
+  { emoji: '🧔', title: 'Beard Trim Master', barber: 'By Rudi' },
+  { emoji: '💈', title: 'Modern Undercut', barber: 'By Andi' },
+  { emoji: '✨', title: 'Textured Crop', barber: 'By Budi' },
+  { emoji: '🌟', title: 'Slick Back Style', barber: 'By Adi' },
+  { emoji: '🔥', title: 'Taper Fade', barber: 'By Rudi' },
 ]
 </script>

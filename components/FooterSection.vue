@@ -14,7 +14,7 @@
             <span class="font-display text-2xl font-bold text-white">Barberland</span>
           </div>
           <p class="text-gray-500 text-sm leading-relaxed max-w-md">
-            Premium barbershop di jantung Jogjakarta. Kami berdedikasi memberikan pengalaman grooming terbaik untuk pria modern.
+            Premium barbershop di jantung Jogjakarta dengan 5 cabang. Kami berdedikasi memberikan pengalaman grooming terbaik untuk pria modern sejak 2018.
           </p>
         </div>
 
@@ -28,14 +28,14 @@
           </ul>
         </div>
 
-        <!-- Newsletter -->
+        <!-- Location -->
         <div>
-          <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Newsletter</h4>
-          <p class="text-gray-500 text-sm mb-4">Dapatkan promo & tips grooming terbaru.</p>
-          <form @submit.prevent class="flex gap-2">
-            <input type="email" placeholder="Email Anda" class="flex-1 bg-dark-800 border border-dark-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-primary-500/50">
-            <button type="submit" class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm transition-colors">Kirim</button>
-          </form>
+          <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Cabang Utama</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Jl. Malioboro No. 123<br>
+            Yogyakarta 55271<br>
+            <a href="https://maps.app.goo.gl/DRpSDXHMAFXfa1kb7?g_st=ic" target="_blank" class="text-primary-400 hover:text-primary-300 transition-colors">📍 Lihat di Google Maps</a>
+          </p>
         </div>
       </div>
 
@@ -45,9 +45,9 @@
           &copy; {{ year }} Barberland Jogja. All rights reserved.
         </p>
         <div class="flex items-center gap-6 text-gray-600 text-xs">
-          <span>Premium Barbershop</span>
+          <span>5 Cabang di Jogjakarta</span>
           <span>✦</span>
-          <span>Jogjakarta</span>
+          <span>Premium Barbershop</span>
           <span>✦</span>
           <span>Since 2018</span>
         </div>
