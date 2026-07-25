@@ -5,13 +5,16 @@
 # =============================================================================
 FROM node:20-alpine AS builder
 
+# Fix npm edgesOut bug
+RUN npm install -g npm@10.9.2 --silent
+
 WORKDIR /app
 
 # Copy package files
 COPY package.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
